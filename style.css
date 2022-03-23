@@ -1,0 +1,731 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*hamburger Menu*/
+
+@media (min-width: 601px) {
+    .hamburger {
+        display: none;
+    }
+}
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+}
+
+.closeIcon {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #F7EEF8;
+    color: black;
+    list-style: none;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    padding: 3%;
+    font-size: 1.5em;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+
+/*STYLING STARTS HERE*/
+
+/*
+======================
+header section
+======================
+*/
+
+header {
+    background: #F7EEF8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1%;
+
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+header img {
+    width: 100%;
+}
+
+.imgContainer {
+    width: 35%;    
+}
+
+header li {
+    padding-right: 5%;
+}
+
+nav {
+    width: 65%;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Oooh Baby', cursive;
+    font-size: 1.5em;
+    width: 100%;
+
+}
+
+/*
+======================
+Hero Section
+======================
+*/
+
+.hero {
+    background-image: url(/img/makeupapplying.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    padding-top: 35%;
+    padding-bottom: 10%;
+    
+}
+
+/*
+======================
+About Section 
+======================
+*/
+
+.about {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-top: 2%; 
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    background: #F7EEF8;
+    text-align: center;
+}
+
+.aboutText {
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.sectionTitle {
+    font-size: 2em;
+    font-weight: 700;
+    padding-bottom: 3%;
+    font-family: 'Shadows Into Light Two', cursive;
+
+}
+
+.sectionText {
+    padding: 0 10% 0 10%;
+    font-family: 'Shadows Into Light Two', cursive;
+    line-height: 1.5em;
+    font-size: 1.7em;
+}
+
+
+.aboutImg {
+    justify-content: center;
+    width: 40%;
+    display: flex;
+    
+}
+
+/*
+==================
+Services
+==================
+*/
+
+.work {
+    font-family: 'Shadows Into Light Two', cursive;
+
+
+}
+
+.workTitle {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    font-size: 2em;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-weight: 700;
+
+}
+
+.workType {
+    font-size: 1.8em;
+}
+
+.workCols {
+    display: flex;
+    text-align: center;
+    background-image: url(/img/sectionbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2%;
+}
+
+.col {
+    width: 33.3333%;
+    padding-left: 2%;
+    padding-right: 2%;
+
+}
+
+.colimg {
+    width: 75%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.servicesText {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+/*
+========================
+table stylings
+========================
+*/
+
+.pricing {
+    display: flex;
+}
+
+.priceTable {
+    width: 33.3333%;
+    padding: 0 1%;
+}
+
+table {
+    text-align: left;
+    line-height: 1.5em;
+    margin: 2% auto;
+    font-family: Arial, Helvetica, sans-serif;
+    table-layout: auto;
+    width: 100%;
+
+}
+
+th {
+    font-weight: 700;
+}
+
+.t1 {
+    background: #F7EEF8;
+}
+
+.t2 { 
+    background: white;
+}
+
+
+/*
+=========================
+Gallery
+=========================
+*/
+
+.gTitle {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.photoCol {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.photoCol img {
+    width: 100%;
+    vertical-align: middle;
+    margin-top: 8px;
+}
+
+.photoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/*
+=====================
+Footer 
+=====================
+*/
+
+footer {
+    background: #FEDDD6;
+    color: black;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    display: flex;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footLogo {
+    width: 33%;
+    align-self: center;
+    margin: auto;
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+
+.phoneContainer {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+}
+
+.phoneInfo {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.7em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.tel {
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.phoneInfo a {
+    text-decoration: none;
+    line-height: 1.5em;
+    color: black;
+}
+
+.social {
+    width: 33%;
+}
+
+.socialContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+    height: 100%;
+    font-weight: 700;
+    line-height: 1.5em;
+
+    
+}
+
+.icon {
+    width: 60px;
+}
+
+.socialTitle {
+    font-family: 'Shadows Into Light Two', cursive;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+.socialContainer li {
+    width: 40%;
+}
+
+.socialContainer a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/*Desktop View */
+
+@media (min-width: 1518px) {
+
+    .title {
+        padding-right: 3%;
+        font-size: 2.5em;
+        font-family: 'Oooh Baby', cursive;
+        text-align: right;
+        font-weight: 700;
+    }
+    .daniellePic {
+        width: 500px;
+        height: 500px;
+        align-self: center;
+    
+    }
+    .aboutText {
+        width: 100%;
+        border-right: solid white 3px;
+    }
+    .menu {
+        display: none;
+    }
+}
+
+@media (max-width: 1517px) and (min-width: 1140px) {
+    .title { 
+        display: none;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .daniellePic {
+        width: 300px;
+        height: 300px;
+    }
+    .aboutImg {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+    .menu {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 1139px) and (min-width: 600px) {
+    .title { 
+        display: none;
+    }
+    
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header li {
+        padding-right: 2%;
+        padding-left: 2%;
+        
+    }
+    .imgContainer {
+        width: 40%;    
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        font-family: 'Oooh Baby', cursive;
+        font-size: 1.5em;
+        width: 100%;
+    
+    }
+    body {
+        margin: 0;
+    }
+    .daniellePic {
+        width: 300px;
+        height: 300px;
+    }
+    .aboutImg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .workCols {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .col {
+        width: 100%;
+    
+    }
+    
+    .colimg {
+        width: 75%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+    .servicesText {
+        padding-bottom: 20px;
+    }
+    .colimg {
+        width: 75%;
+        padding-bottom: 5%;
+        padding-top: 2%;
+    }
+    .pricing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .priceTable {
+        width: 90%;
+        padding: 1%;
+    }
+    .icon {
+        width: 40px;
+    }
+    .menu {
+        display: none;
+    }
+    
+
+}
+
+@media (max-width: 599px) {
+    .title { 
+        display: none;
+    }
+    
+    .desktopMenu {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header li {
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+    nav {
+        width: 100%;
+        }
+    .imgContainer {
+        width: 100%;    
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        font-family: 'Oooh Baby', cursive;
+        font-size: 1.2em;
+        width: 100%;    
+    }
+    body {
+        margin: 0;
+    }
+    .daniellePic {
+        width: 300px;
+        height: 300px;
+    }
+    .aboutImg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .workCols {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .col {
+        width: 100%;
+    
+    }
+    
+    .colimg {
+        width: 75%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+
+    .servicesText {
+        padding-bottom: 20px;
+    }
+    .colimg {
+        width: 75%;
+        padding-bottom: 5%;
+        padding-top: 2%;
+    }
+    .pricing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .priceTable {
+        width: 90%;
+        padding: 1%;
+    }
+    .icon {
+        width: 40px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footLogo {
+        width: 100%;
+        align-self: center;
+        padding-bottom: 5%;
+        padding-top: 3%;
+    
+    }
+    
+    .phoneContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3%;
+        flex-direction: column;
+    
+    }
+    
+    .phoneInfo {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .tel {
+        font-weight: 700;
+        font-size: 1.4em;
+    }
+
+    .social {
+        width: 100%;
+    }
+    
+    .socialContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+        font-weight: 700;
+        line-height: 1.5em;
+        padding-bottom: 3%;
+    
+        
+    }
+    
+    .icon {
+        width: 60px;
+    }
+    
+    .socialTitle {
+        font-family: 'Shadows Into Light Two', cursive;
+        text-align: center;
+        font-size: 1.5em;
+    
+    }
+    
+    .socialContainer li {
+        width: 100%;
+    }
+    
+    .socialContainer a {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .socialContainer span {
+        display: none;
+    }
+
+}
